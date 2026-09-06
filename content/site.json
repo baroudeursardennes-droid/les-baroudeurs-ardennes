@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Les Baroudeurs Ardennes",
+    "subtitle": "Facilitons l’itinérance !",
+    "intro": "Une association locale née d’une passion commune pour le vélo, la randonnée et le territoire ardennais.",
+    "logo": "/assets/logo-officiel.png",
+    "background": "/assets/fond-ardennais.jpg"
+  },
+  "objectives": {
+    "title": "Nos objectifs",
+    "items": [
+      "Accueillir",
+      "Faciliter",
+      "Créer du lien",
+      "Accompagner",
+      "Faire découvrir"
+    ]
+  },
+  "association": {
+    "title": "Qui sommes-nous ?",
+    "paragraphs": [
+      "Les Baroudeurs Ardennes est une association locale née d’une passion commune pour le vélo, la randonnée et le territoire ardennais.",
+      "Nous voulons rendre l’itinérance plus accessible en répondant aux besoins des randonneurs et des cyclotouristes.",
+      "Notre démarche repose sur le partage, la transmission des savoir-faire et la valorisation des Ardennes."
+    ]
+  },
+  "projects": [
+    {
+      "title": "Les Lockers des Baroudeurs",
+      "text": "Des consignes pour bagages avec recharges VAE et téléphone, pour favoriser les haltes et les visites.",
+      "status": "Projet prioritaire",
+      "icon": "▦"
+    },
+    {
+      "title": "Le Triporteur des Baroudeurs",
+      "text": "Un vélo-taxi mis à disposition des associations et des collectivités pour faire découvrir le territoire et proposer un service différent.",
+      "status": "Projet en développement",
+      "icon": "🚲"
+    },
+    {
+      "title": "Les animations",
+      "text": "Des randonnées, sorties à vélo, aide à la préparation du voyage, rencontres (diététicien, kinésithérapeute, associations…).",
+      "status": "Actions à développer",
+      "icon": "🥾"
+    },
+    {
+      "title": "Les formations",
+      "text": "Un accompagnement personnalisé à l’entretien et à la réparation vélo en vue d’être autonome sur la route.",
+      "status": "À venir",
+      "icon": "🔧"
+    },
+    {
+      "title": "Le Café des Baroudeurs",
+      "text": "Un lieu convivial où trouver du confort pour profiter d’un voyage agréable : matériel, point d’eau, douche, salle de repos, wifi et infos pratiques.",
+      "status": "Projet à long terme",
+      "icon": "☕"
+    }
+  ],
+  "join": {
+    "title": "Rejoignez l’aventure",
+    "intro": "Les Baroudeurs Ardennes vivent grâce à l’énergie des bénévoles, des adhérents et des partenaires locaux.",
+    "cards": [
+      {
+        "title": "Devenir bénévole",
+        "text": "Partager du temps, des compétences ou simplement l’envie d’agir."
+      },
+      {
+        "title": "Adhérer",
+        "text": "Soutenir l’association et participer à ses animations et son développement."
+      },
+      {
+        "title": "Devenir partenaire",
+        "text": "Commerçants, associations, collectivités et acteurs du territoire : construisons ensemble !"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "intro": "Une idée, un projet, un coup de main ? Venez
