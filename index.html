@@ -1,23 +1,190 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b3d2d"><title>Les Baroudeurs Ardennes</title>
-<style>
-:root{--g:#0b3d2d;--g2:#15533f;--cream:#f8f1e5;--gold:#b88932;--ink:#203f34}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}
-header{position:fixed;z-index:20;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:8px 4%;background:#faf8f3ee;backdrop-filter:blur(9px);box-shadow:0 2px 14px #0002}.brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--g)}.brand img{width:56px;height:56px}nav{display:flex;gap:20px;font-weight:700;font-size:.88rem}.social{display:flex;gap:8px}.social a{background:var(--g);color:#fff;padding:9px 13px;border-radius:999px;font-weight:800;font-size:.8rem}
-.hero{height:88svh;min-height:650px;max-height:850px;position:relative;background:center/cover no-repeat;display:flex;align-items:flex-end;padding:100px 6% 54px;color:#fff}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#062c22d9 0%,#062c2240 65%,transparent)}.heroin{position:relative;max-width:760px}.hero img{width:min(300px,48vw);filter:drop-shadow(0 10px 18px #0006)}h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.96;margin:12px 0}.hero h2{color:#efc36f;font-size:clamp(1.3rem,3vw,2rem);margin:0 0 10px}.hero p{font-size:1.08rem;line-height:1.6}
-.objectives{background:var(--g);color:#fff;text-align:center;padding:26px 20px}.objectives h2{margin:0 0 14px}.chips{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}.chips span{padding:9px 14px;border:1px solid #ffffff3b;background:#ffffff10;border-radius:999px;font-weight:800}
-section{padding:66px 6%}.cream{background:var(--cream)}.head{text-align:center;max-width:850px;margin:0 auto 30px}.head small{text-transform:uppercase;letter-spacing:.23em;color:var(--gold);font-weight:800}.head h2{font-size:clamp(2rem,4vw,3.1rem);color:var(--g);margin:8px 0}.about{max-width:980px;margin:auto;background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 30px #0001}.about p{font-size:1.05rem;line-height:1.75}
-.grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #e7e0d6;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 9px 28px #0001}.visual{height:105px;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.7rem}.body{padding:22px}.body h3{color:var(--g);margin:0 0 9px}.body p{line-height:1.62}.status{color:var(--gold);font-weight:800;font-size:.86rem}
-.join{background:linear-gradient(#f8f1e5e8,#f8f1e5f5),url('/assets/fond-ardennais.jpg') center/cover}.joinintro{text-align:center;max-width:760px;margin:0 auto 25px;line-height:1.7}.join .grid{grid-template-columns:repeat(3,1fr)}.joincard{background:#fff;border-radius:20px;padding:24px;box-shadow:0 9px 26px #0001}.joincard h3{color:var(--g);margin-top:0}.joincard p{line-height:1.65}
-.contact{background:var(--g);color:#fff;text-align:center}.contact h2{font-size:clamp(2rem,4vw,3rem);margin-top:0}.contact p{font-size:1.08rem}.buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}.buttons a,.buttons span{background:#fff;color:var(--g);padding:12px 17px;border-radius:999px;font-weight:800}
-footer{background:#05291f;color:#edf3f0;padding:28px 6%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer small{line-height:1.7}
-@media(max-width:850px){nav{display:none}.brand span{display:none}.grid{grid-template-columns:1fr 1fr}.join .grid{grid-template-columns:1fr}}
-@media(max-width:600px){header{padding:7px 14px}.brand img{display:none}.social{margin-left:auto}.social a{font-size:.72rem;padding:8px 10px}.hero{height:76svh;min-height:590px;max-height:690px;padding:80px 20px 38px;background-position:68% center}.hero img{width:205px}.hero h1{font-size:2.35rem}.hero h2{font-size:1.15rem}.hero p{font-size:.95rem}section{padding:50px 20px}.grid{grid-template-columns:1fr}.chips span{font-size:.84rem}}
-</style></head><body>
-<header><a class="brand" href="#accueil"><img id="navLogo"><span>Les Baroudeurs Ardennes</span></a><nav><a href="#association">Qui sommes-nous ?</a><a href="#projets">Nos projets</a><a href="#rejoindre">Rejoignez-nous</a><a href="#contact">Contact</a></nav><div class="social"><a id="fbTop" target="_blank">Facebook</a><a id="igTop" target="_blank">Instagram</a></div></header>
-<div class="hero" id="accueil"><div class="heroin"><img id="heroLogo"><h1 id="heroTitle"></h1><h2 id="heroSubtitle"></h2><p id="heroIntro"></p></div></div>
-<div class="objectives"><h2 id="objTitle"></h2><div class="chips" id="chips"></div></div>
-<section class="cream" id="association"><div class="head"><small>L'association</small><h2 id="aboutTitle"></h2></div><div class="about" id="about"></div></section>
-<section id="projets"><div class="head"><small>Nos projets et actions</small><h2>Des projets pour accueillir, faciliter et faire découvrir</h2></div><div class="grid" id="projects"></div></section>
-<section class="join" id="rejoindre"><div class="head"><small>Participer</small><h2 id="joinTitle"></h2></div><p class="joinintro" id="joinIntro"></p><div class="grid" id="joinGrid"></div></section>
-<section class="contact" id="contact"><h2 id="contactTitle"></h2><p id="contactIntro"></p><div class="buttons"><span id="phone"></span><a id="mail"></a><a id="fb" target="_blank">Facebook</a><a id="ig" target="_blank">Instagram</a></div></section>
-<footer><div><strong>Les Baroudeurs Ardennes</strong><br><small id="baseline"></small></div><small id="legal"></small></footer>
-<script>fetch('/content/site.json').then(r=>r.json()).then(d=>{document.querySelector('.hero').style.backgroundImage=`url("${d.hero.background}")`;navLogo.src=d.hero.logo;heroLogo.src=d.hero.logo;heroTitle.textContent=d.hero.title;heroSubtitle.textContent=d.hero.subtitle;heroIntro.textContent=d.hero.intro;objTitle.textContent=d.objectives.title;chips.innerHTML=d.objectives.items.map(x=>`<span>${x}</span>`).join('');aboutTitle.textContent=d.association.title;about.innerHTML=d.association.paragraphs.map(x=>`<p>${x}</p>`).join('');projects.innerHTML=d.projects.map(p=>`<article class="card"><div class="visual">${p.icon}</div><div class="body"><h3>${p.title}</h3><p>${p.text}</p><span class="status">${p.status}</span></div></article>`).join('');joinTitle.textContent=d.join.title;joinIntro.textContent=d.join.intro;joinGrid.innerHTML=d.join.cards.map(c=>`<div class="joincard"><h3>${c.title}</h3><p>${c.text}</p></div>`).join('');contactTitle.textContent=d.contact.title;contactIntro.textContent=d.contact.intro;phone.textContent=d.contact.phone;mail.textContent=d.contact.email;mail.href='mailto:'+d.contact.email;[fb,fbTop].forEach(a=>a.href=d.contact.facebook);[ig,igTop].forEach(a=>a.href=d.contact.instagram);baseline.textContent=d.footer.baseline;legal.textContent=d.footer.legal})</script></body></html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#0b3d2d">
+
+  <title>Les Baroudeurs Ardennes</title>
+
+  <style>
+
+    :root {
+      --vert: #0b3d2d;
+      --vert2: #15533f;
+      --creme: #f8f1e5;
+      --or: #b88932;
+      --texte: #203f34;
+      --blanc: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texte);
+      background: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* MENU */
+
+    header {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 8px 4%;
+
+      background: rgba(250,248,243,0.95);
+
+      backdrop-filter: blur(9px);
+
+      box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+    }
+
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--vert);
+
+      font-weight: 800;
+    }
+
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+
+    nav {
+      display: flex;
+      gap: 20px;
+
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+
+    .social {
+      display: flex;
+      gap: 8px;
+    }
+
+
+    .social a {
+      background: var(--vert);
+      color: white;
+
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+
+
+    /* ACCUEIL */
+
+    .hero {
+      min-height: 650px;
+      height: 88svh;
+      max-height: 850px;
+
+      position: relative;
+
+      display: flex;
+      align-items: flex-end;
+
+      padding: 100px 6% 54px;
+
+      color: white;
+
+      background-image: url("./assets/fond-ardennais.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+    }
+
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(6,44,34,0.88) 0%,
+          rgba(6,44,34,0.30) 65%,
+          rgba(6,44,34,0.05) 100%
+        );
+    }
+
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+
+    .hero-logo {
+      width: min(300px,48vw);
+
+      height: auto;
+
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.4));
+    }
+
+
+    .hero h1 {
+      font-size: clamp(2.6rem,6vw,5rem);
+
+      line-height: 0.96;
+
+      margin: 12px 0;
+    }
+
+
+    .hero h2 {
+      color: #efc36f;
+
+      font-size: clamp(1.3rem,3vw,2rem
