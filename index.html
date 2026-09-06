@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3d2d">
+
+  <title>Les Baroudeurs Ardennes</title>
+
+  <style>
+    :root{
+      --vert:#0b3d2d;
+      --vert2:#15533f;
+      --creme:#f8f1e5;
+      --or:#b88932;
+      --texte:#203f34;
+      --blanc:#ffffff;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--texte);
+      background:#fff;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:20;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      padding:8px 4%;
+
+      background:rgba(250,248,243,.95);
+      backdrop-filter:blur(9px);
+
+      box-shadow:0 2px 14px rgba(0,0,0,.12);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      color:var(--vert);
+      font-weight:800;
+    }
+
+    .brand img{
+      width:56px;
+      height:56px;
+      object-fit:contain;
+    }
+
+    nav{
+      display:flex;
+      gap:20px;
+
+      font-size:.88rem;
+      font-weight:700;
+    }
+
+    .social{
+      display:flex;
+      gap:8px;
+    }
+
+    .social a{
+      background:var(--vert);
+      color:#fff;
+
+      padding:9px 13px;
+
+      border-radius:999px;
+
+      font-weight:800;
+      font-size:.8rem;
+    }
+
+    .hero{
+      min-height:650px;
+      height:88svh;
+      max-height:850px;
+
+      position:relative;
+
+      display:flex;
+      align-items:flex-end;
+
+      padding:100px 6% 54px;
+
+      color:#fff;
+
+      background-image:url("assets/fond-ardennais.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .hero::before{
+      content:"";
+
+      position:absolute;
+      inset:0;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(6,44,34,.90) 0%,
+          rgba(6,44,34,.45) 55%,
+          rgba(6,44,34,.10) 100%
+        );
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+
+      max-width:780px;
+    }
+
+    .hero-logo{
+      width:min(300px,48vw);
+      height:auto;
+
+      filter:drop-shadow(0 10px 18px rgba(0,0,0,.4));
+    }
+
+    .hero h1{
+      font-size:clamp(2.6rem,6vw,5rem);
+      line-height:.96;
+
+      margin:12px 0;
+    }
+
+    .hero h2{
+      color:#efc36f;
+
+      font-size:clamp(1.3rem,3vw,2rem);
+
+      margin:0 0 10px;
+    }
+
+    .hero p{
+      font-size:1.08rem;
+      line-height:1.6;
+
+      max-width:700px;
+    }
+
+    .objectifs{
+      background:var(--vert);
+      color:#fff;
+
+      text-align:center;
+
+      padding:26px 20px;
+    }
+
+    .objectifs h2{
+      margin:0 0 14px;
+
+      font-size:2rem;
+    }
+
+    .chips{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      gap:9px;
+    }
+
+    .chips span{
+      padding:9px 14px;
+
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.07);
+
+      border-radius:999px;
+
+      font-weight:800;
+    }
+
+    section{
+      padding:66px 6%;
+    }
+
+    .creme{
+      background:var(--creme);
+    }
+
+    .titre-section{
+      text-align:center;
+
+      max-width:850px;
+
+      margin:0 auto 30px;
+    }
+
+    .titre-section small{
+      text-transform:uppercase;
+      letter-spacing:.23em;
+
+      color:var(--or);
+
+      font-weight:800;
+    }
+
+    .titre-section h2{
+      font-size:clamp(2rem,4vw,3.1rem);
+
+      color:var(--vert);
+
+      margin:8px 0;
+    }
+
+    .presentation{
+      max-width:980px;
+
+      margin:auto;
+
+      background:#fff;
+
+      border-radius:24px;
+
+      padding:30px;
+
+      box-shadow:0 10px 30px rgba(0,0,0,.07);
+    }
+
+    .presentation p{
+      font-size:1.05rem;
+      line-height:1.75;
+    }
+
+    .projets-grid{
+      max-width:1180px;
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      gap:18px;
+    }
+
+    .projet{
+      border:1px solid #e7e0d6;
+
+      border-radius:22px;
+
+      overflow:hidden;
+
+      background:#fff;
+
+      box-shadow:0 9px 28px rgba(0,0,0,.06);
+    }
+
+    .projet-visuel{
+      height:105px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--vert),
+          var(--vert2)
+        );
+
+      color:#fff;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:2.7rem;
+    }
+
+    .projet-contenu{
+      padding:22px;
+    }
+
+    .projet h3{
+      color:var(--vert);
+
+      margin:0 0 9px;
+    }
+
+    .projet p{
+      line-height:1.62;
+    }
+
+    .statut{
+      display:inline-block;
+
+      margin-top:8px;
+
+      color:var(--or);
+
+      font-weight:800;
+      font-size:.86rem;
+    }
+
+    .rejoindre{
+      background:
+        linear-gradient(
+          rgba(248,241,229,.92),
+          rgba(248,241,229,.97)
+        ),
+        url("assets/fond-ardennais.jpg");
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .intro-rejoindre{
+      text-align:center;
+
+      max-width:760px;
+
+      margin:0 auto 25px;
+
+      line-height:1.7;
+    }
+
+    .rejoindre-grid{
+      max-width:1050px;
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      gap:18px;
+    }
+
+    .rejoindre-card{
+      background:#fff;
+
+      border-radius:20px;
+
+      padding:24px;
+
+      box-shadow:0 9px 26px rgba(0,0,0,.07);
+    }
+
+    .rejoindre-card h3{
+      color:var(--vert);
+
+      margin-top:0;
+    }
+
+    .rejoindre-card p{
+      line-height:1.65;
+    }
+
+    .contact{
+      background:var(--vert);
+      color:#fff;
+
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:clamp(2rem,4vw,3rem);
+
+      margin-top:0;
+    }
+
+    .contact p{
+      font-size:1.08rem;
+      line-height:1.6;
+    }
+
+    .contact-buttons{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      gap:10px;
+
+      margin-top:22px;
+    }
+
+    .contact-buttons a{
+      background:#fff;
+      color:var(--vert);
+
+      padding:12px 17px;
+
+      border-radius:999px;
+
+      font-weight:800;
+    }
+
+    footer{
+      background:#05291f;
+      color:#edf3f0;
+
+      padding:28px 6%;
+
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+
+      gap:20px;
+    }
+
+    footer small{
+      line-height:1.7;
+    }
+
+    @media(max-width:850px){
+      nav{
+        display:none;
+      }
+
+      .brand span{
+        display:none;
+      }
+
+      .projets-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .rejoindre-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:600px){
+
+      header{
+        padding:7px 14px;
+      }
+
+      .brand img{
+        width:48px;
+        height:48px;
+      }
+
+      .social{
+        margin-left:auto;
+      }
+
+      .social a{
+        font-size:.72rem;
+        padding:8px 10px;
+      }
+
+      .hero{
+        min-height:590px;
+        height:76svh;
+        max-height:690px;
+
+        padding:80px 20px 38px;
+
+        background-position:68% center;
+      }
+
+      .hero-logo{
+        width:205px;
+      }
+
+      .hero h1{
+        font-size:2.35rem;
+      }
+
+      .hero h2{
+        font-size:1.15rem;
+      }
+
+      .hero p{
+        font-size:.95rem;
+      }
+
+      section{
+        padding:50px 20px;
+      }
+
+      .projets-grid{
+        grid-template-columns:1fr;
+      }
+
+      .chips span{
+        font-size:.84rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <a class="brand" href="#accueil">
+
+    <img
+      src="assets/logo-officiel.png"
+      alt="Logo Les Baroudeurs Ardennes">
+
+    <span>Les Baroudeurs Ardennes</span>
+
+  </a>
+
+  <nav>
+
+    <a href="#association">Qui sommes-nous ?</a>
+
+    <a href="#projets">Nos projets</a>
+
+    <a href="#rejoindre">Rejoignez-nous</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <div class="social">
+
+    <a
+      href="https://www.facebook.com/share/1WyYCEHYVP/"
+      target="_blank"
+      rel="noopener">
+
+      Facebook
+
+    </a>
+
+    <a
+      href="https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
+      target="_blank"
+      rel="noopener">
+
+      Instagram
+
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<div class="hero" id="accueil">
+
+  <div class="hero-content">
+
+    <img
+      class="hero-logo"
+      src="assets/logo-officiel.png"
+      alt="Les Baroudeurs Ardennes">
+
+    <h1>
+      Les Baroudeurs Ardennes
+    </h1>
+
+    <h2>
+      Facilitons l’itinérance !
+    </h2>
+
+    <p>
+      Une association locale née d’une passion commune pour le vélo,
+      la randonnée et notre territoire.
+      Ensemble, imaginons des services, des rencontres
+      et des projets utiles pour profiter pleinement des Ardennes.
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<div class="objectifs">
+
+  <h2>Nos objectifs</h2>
+
+  <div class="chips">
+
+    <span>Accueillir</span>
+
+    <span>Faciliter</span>
+
+    <span>Créer du lien</span>
+
+    <span>Accompagner</span>
+
+    <span>Faire découvrir</span>
+
+  </div>
+
+</div>
+
+
+
+<section
+  class="creme"
+  id="association">
+
+
+  <div class="titre-section">
+
+    <small>
+      L'association
+    </small>
+
+    <h2>
+      Qui sommes-nous ?
+    </h2>
+
+  </div>
+
+
+  <div class="presentation">
+
+    <p>
+      <strong>Les Baroudeurs Ardennes</strong>
+      est une association locale qui rassemble des passionnés
+      de randonnée pédestre, de vélo, d’itinérance
+      et de découverte du territoire.
+    </p>
+
+    <p>
+      Notre ambition est simple :
+      développer des solutions concrètes pour mieux accueillir
+      les visiteurs, accompagner les pratiquants,
+      partager les savoir-faire et créer du lien
+      entre habitants, associations, commerçants et collectivités.
+    </p>
+
+    <p>
+      Nos projets sont pensés pour être utiles au territoire,
+      accessibles au plus grand nombre
+      et construits progressivement avec les acteurs locaux.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section id="projets">
+
+
+  <div class="titre-section">
+
+    <small>
+      Nos projets et actions
+    </small>
+
+    <h2>
+      Des idées concrètes au service du territoire
+    </h2>
+
+  </div>
+
+
+
+  <div class="projets-grid">
+
+
+    <article class="projet">
+
+      <div class="projet-visuel">
+        🔐
+      </div>
+
+      <div class="projet-contenu">
+
+        <h3>
+          Les Lockers des Baroudeurs
+        </h3>
+
+        <p>
+          Des casiers connectés permettant de déposer ses bagages
+          et de recharger un téléphone
+          ou un vélo à assistance électrique.
+          Une solution pratique pour profiter plus librement
+          d’une halte et découvrir la ville.
+        </p>
+
+        <span class="statut">
+          Projet prioritaire
+        </span>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="projet">
+
+      <div class="projet-visuel">
+        🚲
+      </div>
+
+      <div class="projet-contenu">
+
+        <h3>
+          Le vélo-taxi des Baroudeurs
+        </h3>
+
+        <p>
+          Un projet de reprise et de développement
+          d’un vélo-taxi à Charleville-Mézières,
+          avec l’envie de proposer une façon originale
+          et conviviale de découvrir le territoire
+          et de participer à des événements locaux.
+        </p>
+
+        <span class="statut">
+          Projet en développement
+        </span>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="projet">
+
+      <div class="projet-visuel">
+        🥾
+      </div>
+
+      <div class="projet-contenu">
+
+        <h3>
+          Sorties et animations
+        </h3>
+
+        <p>
+          Randonnées, sorties à vélo,
+          rencontres et animations autour du voyage,
+          de la préparation d’itinéraires
+          et de la découverte des Ardennes.
+        </p>
+
+        <span class="statut">
+          Actions à développer
+        </span>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="projet">
+
+      <div class="projet-visuel">
+        🔧
+      </div>
+
+      <div class="projet-contenu">
+
+        <h3>
+          Ateliers et formations vélo
+        </h3>
+
+        <p>
+          Des temps d’accompagnement pour apprendre
+          à entretenir son vélo,
+          effectuer les réparations courantes
+          et gagner en autonomie avant de prendre la route.
+        </p>
+
+        <span class="statut">
+          À venir
+        </span>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="projet">
+
+      <div class="projet-visuel">
+        ☕
+      </div>
+
+      <div class="projet-contenu">
+
+        <h3>
+          Le Café des Baroudeurs
+        </h3>
+
+        <p>
+          À plus long terme,
+          l’association imagine un lieu convivial
+          dédié aux voyageurs, randonneurs et cyclistes :
+          un espace pour se rencontrer,
+          se renseigner, se reposer
+          et préparer la suite de son parcours.
+        </p>
+
+        <span class="statut">
+          Projet à long terme
+        </span>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="rejoindre"
+  id="rejoindre">
+
+
+  <div class="titre-section">
+
+    <small>
+      Participer
+    </small>
+
+    <h2>
+      Rejoignez l’aventure
+    </h2>
+
+  </div>
+
+
+  <p class="intro-rejoindre">
+
+    Les Baroudeurs Ardennes avancent grâce aux bénévoles,
+    aux adhérents, aux partenaires
+    et à toutes celles et ceux
+    qui souhaitent faire vivre de nouveaux projets
+    dans les Ardennes.
+
+  </p>
+
+
+
+  <div class="rejoindre-grid">
+
+
+    <div class="rejoindre-card">
+
+      <h3>
+        Devenir bénévole
+      </h3>
+
+      <p>
+        Donner un peu de temps,
+        partager une compétence,
+        participer à une animation
+        ou simplement apporter un coup de main.
+      </p>
+
+    </div>
+
+
+
+    <div class="rejoindre-card">
+
+      <h3>
+        Adhérer
+      </h3>
+
+      <p>
+        Soutenir l’association,
+        participer à son développement
+        et prendre part à la vie
+        des Baroudeurs Ardennes.
+      </p>
+
+    </div>
+
+
+
+    <div class="rejoindre-card">
+
+      <h3>
+        Devenir partenaire
+      </h3>
+
+      <p>
+        Commerçants, associations,
+        entreprises, collectivités
+        et acteurs locaux :
+        construisons ensemble
+        des projets utiles au territoire.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="contact"
+  id="contact">
+
+
+  <h2>
+    Contactez-nous
+  </h2>
+
+
+  <p>
+    Une idée, un projet,
+    une proposition de partenariat
+    ou simplement envie d’en savoir plus ?
+    Échangeons !
+  </p>
+
+
+  <div class="contact-buttons">
+
+
+    <a
+      href="https://www.facebook.com/share/1WyYCEHYVP/"
+      target="_blank"
+      rel="noopener">
+
+      Facebook
+
+    </a>
+
+
+    <a
+      href="https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
+      target="_blank"
+      rel="noopener">
+
+      Instagram
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<footer>
+
+
+  <div>
+
+    <strong>
+      Les Baroudeurs Ardennes
+    </strong>
+
+    <br>
+
+    <small>
+      Déposez, rechargez, profitez, explorez.
+    </small>
+
+  </div>
+
+
+  <small>
+
+    Association loi 1901
+    • RNA W081007803
+    • SIREN 109 257 329
+    • SIRET 109 257 329 00010
+
+    <br>
+
+    33 rue de Berthaucourt,
+    08000 Charleville-Mézières
+
+  </small>
+
+
+</footer>
+
+
+</body>
+        </html>
