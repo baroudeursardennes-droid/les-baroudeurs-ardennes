@@ -1,0 +1,1 @@
+Version 3 du site Les Baroudeurs Ardennes. Prête pour déploiement manuel Netlify. Les textes sont centralisés dans content/site.json.
