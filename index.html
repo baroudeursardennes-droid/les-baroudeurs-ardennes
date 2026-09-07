@@ -2,14 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Les Baroudeurs Ardennes | Vélo, randonnée et découverte des Ardennes</title>
 
-  <meta name="description"
-        content="Les Baroudeurs Ardennes est une association de Charleville-Mézières dédiée au vélo, à la randonnée, à l'itinérance et à la découverte du territoire ardennais.">
+  <meta
+    name="description"
+    content="Les Baroudeurs Ardennes est une association basée à Charleville-Mézières autour du vélo, de la randonnée, de l'itinérance et de la découverte du territoire ardennais."
+  >
+
+  <meta
+    name="keywords"
+    content="Les Baroudeurs Ardennes, Charleville-Mézières, Ardennes, vélo, randonnée, cyclotourisme, itinérance, vélo-taxi, lockers vélo, atelier vélo"
+  >
 
   <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://lesbaroudeursardennes.fr/">
+
+  <!-- Open Graph : Facebook, WhatsApp, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Les Baroudeurs Ardennes">
+  <meta
+    property="og:description"
+    content="Association autour du vélo, de la randonnée, de l'itinérance et de la découverte des Ardennes."
+  >
+  <meta property="og:url" content="https://lesbaroudeursardennes.fr/">
+  <meta
+    property="og:image"
+    content="https://lesbaroudeursardennes.fr/assets/logo-officiel.png"
+  >
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Les Baroudeurs Ardennes">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Les Baroudeurs Ardennes">
+  <meta
+    name="twitter:description"
+    content="Vélo, randonnée, itinérance et découverte du territoire ardennais."
+  >
+  <meta
+    name="twitter:image"
+    content="https://lesbaroudeursardennes.fr/assets/logo-officiel.png"
+  >
+
+  <!-- Données structurées Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Les Baroudeurs Ardennes",
+    "url": "https://lesbaroudeursardennes.fr/",
+    "logo": "https://lesbaroudeursardennes.fr/assets/logo-officiel.png",
+    "description": "Association basée à Charleville-Mézières autour du vélo, de la randonnée, de l'itinérance et de la découverte du territoire ardennais.",
+    "email": "mailto:baroudeursardennes@gmail.com",
+    "telephone": "+33759968414",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "33 rue de Berthaucourt",
+      "postalCode": "08000",
+      "addressLocality": "Charleville-Mézières",
+      "addressCountry": "FR"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1WyYCEHYVP/",
+      "https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -40,9 +102,8 @@
 
     img {
       max-width: 100%;
+      height: auto;
     }
-
-    /* NAVIGATION */
 
     nav {
       position: sticky;
@@ -88,8 +149,6 @@
     nav a:hover {
       color: #f1cf83;
     }
-
-    /* HERO */
 
     .hero {
       min-height: 680px;
@@ -157,8 +216,6 @@
       opacity: .95;
     }
 
-    /* SECTIONS */
-
     section {
       padding: 78px 20px;
     }
@@ -185,8 +242,6 @@
       text-align: center;
       font-size: 18px;
     }
-
-    /* OBJECTIFS ET PROJETS */
 
     .cards {
       display: grid;
@@ -228,8 +283,6 @@
       text-align: center;
     }
 
-    /* BANDEAU */
-
     .highlight {
       background: var(--green);
       color: white;
@@ -243,8 +296,6 @@
       font-size: 20px;
       font-weight: 600;
     }
-
-    /* CONTACT */
 
     .contact {
       text-align: center;
@@ -299,8 +350,6 @@
       color: var(--green-dark);
     }
 
-    /* FOOTER */
-
     footer {
       background: var(--green-dark);
       color: #d8ddd9;
@@ -317,8 +366,6 @@
     footer p {
       margin: 4px 0;
     }
-
-    /* MOBILE */
 
     @media (max-width: 760px) {
 
@@ -367,8 +414,9 @@
 
 <body>
 
-  <nav>
+  <nav aria-label="Navigation principale">
     <div class="nav-container">
+
       <div class="nav-title">
         Les Baroudeurs Ardennes
       </div>
@@ -379,16 +427,20 @@
         <a href="#projets">Nos projets</a>
         <a href="#contact">Contact</a>
       </div>
+
     </div>
   </nav>
 
   <header class="hero">
+
     <div class="hero-content">
 
       <img
         src="assets/logo-officiel.png"
-        alt="Logo de l'association Les Baroudeurs Ardennes"
+        alt="Logo officiel de l'association Les Baroudeurs Ardennes"
         class="hero-logo"
+        width="330"
+        height="330"
       >
 
       <h1>Les Baroudeurs Ardennes</h1>
@@ -398,6 +450,7 @@
       </p>
 
       <div class="hero-buttons">
+
         <a href="#association" class="button">
           Découvrir l'association
         </a>
@@ -405,189 +458,212 @@
         <a href="#contact" class="button secondary">
           Nous contacter
         </a>
+
       </div>
 
     </div>
+
   </header>
 
-  <section id="association">
-    <div class="container">
+  <main>
 
-      <h2>Qui sommes-nous ?</h2>
+    <section id="association">
 
-      <p class="section-intro">
-        Les Baroudeurs Ardennes est une association implantée à
-        Charleville-Mézières autour d'une passion commune :
-        le vélo, la randonnée et la découverte de notre territoire.
-      </p>
+      <div class="container">
 
-      <p class="section-intro">
-        Notre ambition est de développer des services, des actions
-        et des projets utiles aux habitants, aux visiteurs,
-        aux randonneurs et aux cyclistes.
-      </p>
+        <h2>Qui sommes-nous ?</h2>
 
-      <p class="section-intro">
-        Ensemble, partageons notre passion pour la randonnée pédestre
-        et à vélo et faisons découvrir les Ardennes autrement.
-      </p>
+        <p class="section-intro">
+          Les Baroudeurs Ardennes est une association implantée à
+          Charleville-Mézières autour d'une passion commune :
+          le vélo, la randonnée et la découverte de notre territoire.
+        </p>
 
-    </div>
-  </section>
+        <p class="section-intro">
+          Notre ambition est de développer des services, des actions
+          et des projets utiles aux habitants, aux visiteurs,
+          aux randonneurs et aux cyclistes.
+        </p>
 
-  <section id="objectifs" class="white">
-    <div class="container">
-
-      <h2>Nos objectifs</h2>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>🚲 Favoriser le vélo</h3>
-          <p>
-            Faciliter la pratique du vélo et accompagner
-            les cyclistes dans leurs déplacements et leurs itinérances.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🥾 Encourager la randonnée</h3>
-          <p>
-            Donner envie de parcourir les Ardennes
-            à pied ou à vélo et de découvrir de nouveaux itinéraires.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🌲 Valoriser le territoire</h3>
-          <p>
-            Faire connaître les paysages, les parcours,
-            les lieux et les acteurs du territoire ardennais.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🤝 Créer du lien</h3>
-          <p>
-            Favoriser les rencontres, le partage,
-            la transmission et les initiatives collectives.
-          </p>
-        </div>
+        <p class="section-intro">
+          Ensemble, partageons notre passion pour la randonnée pédestre
+          et à vélo et faisons découvrir les Ardennes autrement.
+        </p>
 
       </div>
-    </div>
-  </section>
 
-  <div class="highlight">
-    <p>
-      Déposez, rechargez, profitez, explorez.
-    </p>
-  </div>
+    </section>
 
-  <section id="projets">
-    <div class="container">
+    <section id="objectifs" class="white">
 
-      <h2>Nos projets</h2>
+      <div class="container">
 
-      <p class="section-intro">
-        Plusieurs projets sont en cours de développement,
-        avec une priorité donnée aux services utiles aux cyclistes,
-        randonneurs, habitants et visiteurs du territoire.
-      </p>
+        <h2>Nos objectifs</h2>
 
-      <div class="cards">
+        <div class="cards">
 
-        <div class="card project-card">
-          <h3>🔐 Les Lockers des Baroudeurs</h3>
-          <p>
-            Un projet de casiers connectés permettant notamment
-            la consigne des bagages, la recharge des téléphones
-            et la recharge des vélos à assistance électrique.
-          </p>
-        </div>
+          <article class="card">
+            <h3>🚲 Favoriser le vélo</h3>
+            <p>
+              Faciliter la pratique du vélo et accompagner
+              les cyclistes dans leurs déplacements et leurs itinérances.
+            </p>
+          </article>
 
-        <div class="card project-card">
-          <h3>🚲 Vélo-taxi</h3>
-          <p>
-            Un projet destiné à faire vivre une autre expérience
-            de Charleville-Mézières et à prolonger une initiative
-            locale originale autour du vélo.
-          </p>
-        </div>
+          <article class="card">
+            <h3>🥾 Encourager la randonnée</h3>
+            <p>
+              Donner envie de parcourir les Ardennes
+              à pied ou à vélo et de découvrir de nouveaux itinéraires.
+            </p>
+          </article>
 
-        <div class="card project-card">
-          <h3>🔧 Ateliers et formations vélo</h3>
-          <p>
-            Des ateliers pour apprendre les bases de la mécanique,
-            gagner en autonomie et partager les savoir-faire
-            autour de l'entretien du vélo.
-          </p>
-        </div>
+          <article class="card">
+            <h3>🌲 Valoriser le territoire</h3>
+            <p>
+              Faire connaître les paysages, les parcours,
+              les lieux et les acteurs du territoire ardennais.
+            </p>
+          </article>
 
-        <div class="card project-card">
-          <h3>☕ Café des Baroudeurs</h3>
-          <p>
-            À plus long terme, imaginer un lieu convivial
-            réunissant accueil, vélo, atelier,
-            échanges et découverte du territoire.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="white contact">
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2>Nous contacter</h2>
-
-        <p>
-          Une question, une idée, un partenariat
-          ou simplement envie d'en savoir plus ?
-        </p>
-
-        <p class="contact-line">
-          📞
-          <a href="tel:+33759968414">
-            07 59 96 84 14
-          </a>
-        </p>
-
-        <p class="contact-line">
-          ✉️
-          <a href="mailto:baroudeursardennes@gmail.com">
-            baroudeursardennes@gmail.com
-          </a>
-        </p>
-
-        <p class="contact-line">
-          📍 Charleville-Mézières – Ardennes
-        </p>
-
-        <div class="socials">
-
-          <a
-            href="https://www.facebook.com/share/1WyYCEHYVP/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Facebook
-          </a>
-
-          <a
-            href="https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
-            target="_blank"
-            rel="noopener noreferrer">
-            Instagram
-          </a>
+          <article class="card">
+            <h3>🤝 Créer du lien</h3>
+            <p>
+              Favoriser les rencontres, le partage,
+              la transmission et les initiatives collectives.
+            </p>
+          </article>
 
         </div>
 
       </div>
+
+    </section>
+
+    <div class="highlight">
+
+      <p>
+        Déposez, rechargez, profitez, explorez.
+      </p>
+
     </div>
-  </section>
+
+    <section id="projets">
+
+      <div class="container">
+
+        <h2>Nos projets</h2>
+
+        <p class="section-intro">
+          Plusieurs projets sont en cours de développement,
+          avec une priorité donnée aux services utiles aux cyclistes,
+          randonneurs, habitants et visiteurs du territoire.
+        </p>
+
+        <div class="cards">
+
+          <article class="card project-card">
+            <h3>🔐 Les Lockers des Baroudeurs</h3>
+            <p>
+              Un projet de casiers connectés permettant notamment
+              la consigne des bagages, la recharge des téléphones
+              et la recharge des vélos à assistance électrique.
+            </p>
+          </article>
+
+          <article class="card project-card">
+            <h3>🚲 Vélo-taxi</h3>
+            <p>
+              Un projet destiné à faire vivre une autre expérience
+              de Charleville-Mézières et à prolonger une initiative
+              locale originale autour du vélo.
+            </p>
+          </article>
+
+          <article class="card project-card">
+            <h3>🔧 Ateliers et formations vélo</h3>
+            <p>
+              Des ateliers pour apprendre les bases de la mécanique,
+              gagner en autonomie et partager les savoir-faire
+              autour de l'entretien du vélo.
+            </p>
+          </article>
+
+          <article class="card project-card">
+            <h3>☕ Café des Baroudeurs</h3>
+            <p>
+              À plus long terme, imaginer un lieu convivial
+              réunissant accueil, vélo, atelier,
+              échanges et découverte du territoire.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="white contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <h2>Nous contacter</h2>
+
+          <p>
+            Une question, une idée, un partenariat
+            ou simplement envie d'en savoir plus ?
+          </p>
+
+          <p class="contact-line">
+            📞
+            <a href="tel:+33759968414">
+              07 59 96 84 14
+            </a>
+          </p>
+
+          <p class="contact-line">
+            ✉️
+            <a href="mailto:baroudeursardennes@gmail.com">
+              baroudeursardennes@gmail.com
+            </a>
+          </p>
+
+          <p class="contact-line">
+            📍 Charleville-Mézières – Ardennes
+          </p>
+
+          <div class="socials">
+
+            <a
+              href="https://www.facebook.com/share/1WyYCEHYVP/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook Les Baroudeurs Ardennes"
+            >
+              Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Les Baroudeurs Ardennes"
+            >
+              Instagram
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
 
   <footer>
 
