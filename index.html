@@ -4,12 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Les Baroudeurs Ardennes</title>
+  <title>Les Baroudeurs Ardennes | Vélo, randonnée et découverte des Ardennes</title>
 
   <meta name="description"
-        content="Les Baroudeurs Ardennes : association dédiée au vélo, à la randonnée, à l'itinérance et à la découverte des Ardennes.">
+        content="Les Baroudeurs Ardennes est une association de Charleville-Mézières dédiée au vélo, à la randonnée, à l'itinérance et à la découverte du territoire ardennais.">
+
+  <meta name="robots" content="index, follow">
 
   <style>
+    :root {
+      --green: #173d2c;
+      --green-dark: #102b20;
+      --cream: #f5f0e6;
+      --gold: #d8ad54;
+      --white: #ffffff;
+      --text: #24352d;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,148 +33,215 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #24352d;
-      background: #f5f0e6;
+      color: var(--text);
+      background: var(--cream);
       line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     /* NAVIGATION */
 
     nav {
-      background: #173d2c;
-      color: white;
-      padding: 14px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(23, 61, 44, 0.97);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
     .nav-container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+      min-height: 68px;
+      padding: 0 22px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
     .nav-title {
-      font-weight: bold;
+      color: white;
+      font-weight: 700;
+      letter-spacing: .3px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
       font-size: 14px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #f1cf83;
     }
 
-    /* ACCUEIL */
+    /* HERO */
 
     .hero {
-      min-height: 650px;
+      min-height: 680px;
       background:
-        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.45)),
+        linear-gradient(rgba(8,26,18,.28), rgba(8,26,18,.58)),
         url("assets/fond-ardennais.jpg") center/cover no-repeat;
 
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
       color: white;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
     }
 
     .hero-logo {
-      width: 300px;
-      max-width: 75vw;
-      margin-bottom: 25px;
+      width: 330px;
+      max-width: 74vw;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 5px 14px rgba(0,0,0,.28));
     }
 
     .hero h1 {
-      font-size: clamp(34px, 6vw, 64px);
-      margin-bottom: 12px;
-      text-shadow: 0 3px 12px rgba(0,0,0,.5);
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      text-shadow: 0 3px 14px rgba(0,0,0,.5);
     }
 
     .hero p {
-      font-size: 21px;
-      margin-bottom: 30px;
-      text-shadow: 0 2px 8px rgba(0,0,0,.5);
+      font-size: clamp(18px, 2.3vw, 23px);
+      margin-bottom: 32px;
+      text-shadow: 0 2px 8px rgba(0,0,0,.45);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .button {
       display: inline-block;
-      padding: 13px 24px;
-      margin: 5px;
+      padding: 13px 25px;
       border-radius: 30px;
-      background: #d8ad54;
-      color: #173d2c;
+      background: var(--gold);
+      color: var(--green-dark);
       text-decoration: none;
       font-weight: bold;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.92);
+      color: var(--green);
     }
 
     .button:hover {
-      opacity: .9;
+      transform: translateY(-2px);
+      opacity: .95;
     }
 
     /* SECTIONS */
 
     section {
-      padding: 70px 20px;
+      padding: 78px 20px;
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 1080px;
       margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #173d2c;
-      font-size: 34px;
-      margin-bottom: 35px;
-    }
-
-    .intro {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
     }
 
     .white {
       background: white;
     }
 
-    /* CARTES */
+    h2 {
+      color: var(--green);
+      text-align: center;
+      font-size: clamp(29px, 4vw, 38px);
+      margin-bottom: 24px;
+    }
+
+    .section-intro {
+      max-width: 820px;
+      margin: 0 auto 18px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* OBJECTIFS ET PROJETS */
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-      margin-top: 35px;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 24px;
+      margin-top: 42px;
     }
 
     .card {
       background: white;
-      padding: 30px 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+      border-radius: 16px;
+      padding: 32px 26px;
       text-align: center;
+      box-shadow: 0 7px 24px rgba(0,0,0,.07);
+      border: 1px solid rgba(23,61,44,.06);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,.10);
+    }
+
+    .white .card {
+      background: var(--cream);
     }
 
     .card h3 {
-      color: #173d2c;
-      margin-bottom: 12px;
+      color: var(--green);
+      margin-bottom: 13px;
+      font-size: 20px;
+    }
+
+    .project-card {
+      text-align: left;
+    }
+
+    .project-card h3 {
+      text-align: center;
+    }
+
+    /* BANDEAU */
+
+    .highlight {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 38px 20px;
+    }
+
+    .highlight p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 20px;
+      font-weight: 600;
     }
 
     /* CONTACT */
@@ -173,17 +251,21 @@
     }
 
     .contact-box {
-      max-width: 650px;
+      max-width: 720px;
       margin: auto;
-      background: #173d2c;
+      background: var(--green);
       color: white;
-      border-radius: 18px;
-      padding: 40px 25px;
+      border-radius: 20px;
+      padding: 45px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
     }
 
     .contact-box h2 {
       color: white;
-      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
     }
 
     .contact-box a {
@@ -193,62 +275,91 @@
     }
 
     .contact-line {
-      margin: 12px 0;
       font-size: 18px;
     }
 
     .socials {
-      margin-top: 25px;
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .socials a {
-      display: inline-block;
-      margin: 6px;
-      padding: 10px 18px;
+      min-width: 135px;
+      padding: 11px 20px;
       border: 1px solid #f1cf83;
-      border-radius: 25px;
+      border-radius: 30px;
+      transition: background .2s ease, color .2s ease;
     }
 
-    /* PIED DE PAGE */
+    .socials a:hover {
+      background: #f1cf83;
+      color: var(--green-dark);
+    }
+
+    /* FOOTER */
 
     footer {
-      background: #102b20;
-      color: #ddd;
+      background: var(--green-dark);
+      color: #d8ddd9;
       text-align: center;
-      padding: 30px 20px;
+      padding: 34px 20px;
       font-size: 14px;
     }
 
     footer strong {
       color: white;
+      font-size: 15px;
     }
 
-    @media (max-width: 700px) {
+    footer p {
+      margin: 4px 0;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
 
       .nav-container {
         display: block;
+        padding: 13px 14px;
         text-align: center;
       }
 
+      .nav-title {
+        margin-bottom: 8px;
+      }
+
       .nav-links {
-        margin-top: 8px;
+        justify-content: center;
+        gap: 8px 13px;
       }
 
       nav a {
-        margin: 0 6px;
         font-size: 12px;
       }
 
       .hero {
-        min-height: 570px;
+        min-height: 610px;
+        padding-top: 55px;
       }
 
       .hero-logo {
-        width: 230px;
+        width: 245px;
       }
 
       section {
-        padding: 50px 18px;
+        padding: 56px 18px;
+      }
+
+      .card {
+        padding: 27px 22px;
+      }
+
+      .contact-box {
+        padding: 36px 20px;
       }
     }
   </style>
@@ -256,11 +367,8 @@
 
 <body>
 
-  <!-- MENU -->
-
   <nav>
     <div class="nav-container">
-
       <div class="nav-title">
         Les Baroudeurs Ardennes
       </div>
@@ -271,20 +379,15 @@
         <a href="#projets">Nos projets</a>
         <a href="#contact">Contact</a>
       </div>
-
     </div>
   </nav>
 
-
-  <!-- ACCUEIL -->
-
   <header class="hero">
-
     <div class="hero-content">
 
       <img
         src="assets/logo-officiel.png"
-        alt="Logo Les Baroudeurs Ardennes"
+        alt="Logo de l'association Les Baroudeurs Ardennes"
         class="hero-logo"
       >
 
@@ -294,51 +397,45 @@
         Vélo • Randonnée • Itinérance • Découverte des Ardennes
       </p>
 
-      <a href="#association" class="button">
-        Découvrir l'association
-      </a>
+      <div class="hero-buttons">
+        <a href="#association" class="button">
+          Découvrir l'association
+        </a>
 
-      <a href="#contact" class="button">
-        Nous contacter
-      </a>
+        <a href="#contact" class="button secondary">
+          Nous contacter
+        </a>
+      </div>
 
     </div>
-
   </header>
 
-
-  <!-- ASSOCIATION -->
-
   <section id="association">
-
     <div class="container">
 
       <h2>Qui sommes-nous ?</h2>
 
-      <p class="intro">
+      <p class="section-intro">
         Les Baroudeurs Ardennes est une association implantée à
-        Charleville-Mézières qui souhaite favoriser la pratique du vélo,
-        de la randonnée et l'itinérance tout en participant à la découverte
-        et à la valorisation du territoire ardennais.
+        Charleville-Mézières autour d'une passion commune :
+        le vélo, la randonnée et la découverte de notre territoire.
       </p>
 
-      <br>
+      <p class="section-intro">
+        Notre ambition est de développer des services, des actions
+        et des projets utiles aux habitants, aux visiteurs,
+        aux randonneurs et aux cyclistes.
+      </p>
 
-      <p class="intro">
+      <p class="section-intro">
         Ensemble, partageons notre passion pour la randonnée pédestre
-        et à vélo et imaginons de nouveaux services utiles aux habitants,
-        visiteurs, randonneurs et cyclistes.
+        et à vélo et faisons découvrir les Ardennes autrement.
       </p>
 
     </div>
-
   </section>
 
-
-  <!-- OBJECTIFS -->
-
   <section id="objectifs" class="white">
-
     <div class="container">
 
       <h2>Nos objectifs</h2>
@@ -346,103 +443,111 @@
       <div class="cards">
 
         <div class="card">
-          <h3>🚲 Vélo</h3>
+          <h3>🚲 Favoriser le vélo</h3>
           <p>
-            Encourager et faciliter la pratique du vélo
-            dans les Ardennes.
+            Faciliter la pratique du vélo et accompagner
+            les cyclistes dans leurs déplacements et leurs itinérances.
           </p>
         </div>
 
         <div class="card">
-          <h3>🥾 Randonnée</h3>
+          <h3>🥾 Encourager la randonnée</h3>
           <p>
-            Accompagner la découverte du territoire à pied
-            et à vélo.
+            Donner envie de parcourir les Ardennes
+            à pied ou à vélo et de découvrir de nouveaux itinéraires.
           </p>
         </div>
 
         <div class="card">
-          <h3>🌲 Territoire</h3>
+          <h3>🌲 Valoriser le territoire</h3>
           <p>
-            Valoriser les Ardennes, leurs paysages,
-            leurs itinéraires et leurs acteurs locaux.
+            Faire connaître les paysages, les parcours,
+            les lieux et les acteurs du territoire ardennais.
           </p>
         </div>
 
         <div class="card">
-          <h3>🤝 Partage</h3>
+          <h3>🤝 Créer du lien</h3>
           <p>
-            Créer des rencontres, transmettre des savoir-faire
-            et développer des projets accessibles au plus grand nombre.
+            Favoriser les rencontres, le partage,
+            la transmission et les initiatives collectives.
           </p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- PROJETS -->
+  <div class="highlight">
+    <p>
+      Déposez, rechargez, profitez, explorez.
+    </p>
+  </div>
 
   <section id="projets">
-
     <div class="container">
 
       <h2>Nos projets</h2>
 
+      <p class="section-intro">
+        Plusieurs projets sont en cours de développement,
+        avec une priorité donnée aux services utiles aux cyclistes,
+        randonneurs, habitants et visiteurs du territoire.
+      </p>
+
       <div class="cards">
 
-        <div class="card">
+        <div class="card project-card">
           <h3>🔐 Les Lockers des Baroudeurs</h3>
           <p>
-            Développer des casiers permettant notamment la consigne
-            des bagages ainsi que la recharge des vélos à assistance
-            électrique et des téléphones.
+            Un projet de casiers connectés permettant notamment
+            la consigne des bagages, la recharge des téléphones
+            et la recharge des vélos à assistance électrique.
           </p>
         </div>
 
-        <div class="card">
+        <div class="card project-card">
           <h3>🚲 Vélo-taxi</h3>
           <p>
-            Un projet autour du vélo-taxi pour proposer une autre manière
-            de parcourir et de découvrir Charleville-Mézières.
+            Un projet destiné à faire vivre une autre expérience
+            de Charleville-Mézières et à prolonger une initiative
+            locale originale autour du vélo.
           </p>
         </div>
 
-        <div class="card">
-          <h3>🔧 Ateliers vélo</h3>
+        <div class="card project-card">
+          <h3>🔧 Ateliers et formations vélo</h3>
           <p>
-            Transmettre les bases de la mécanique vélo et favoriser
-            l'autonomie grâce à des ateliers et des formations.
+            Des ateliers pour apprendre les bases de la mécanique,
+            gagner en autonomie et partager les savoir-faire
+            autour de l'entretien du vélo.
           </p>
         </div>
 
-        <div class="card">
+        <div class="card project-card">
           <h3>☕ Café des Baroudeurs</h3>
           <p>
-            À plus long terme, imaginer un lieu convivial réunissant
-            accueil, vélo, échanges, services et découverte du territoire.
+            À plus long terme, imaginer un lieu convivial
+            réunissant accueil, vélo, atelier,
+            échanges et découverte du territoire.
           </p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- CONTACT -->
-
   <section id="contact" class="white contact">
-
     <div class="container">
 
       <div class="contact-box">
 
         <h2>Nous contacter</h2>
+
+        <p>
+          Une question, une idée, un partenariat
+          ou simplement envie d'en savoir plus ?
+        </p>
 
         <p class="contact-line">
           📞
@@ -481,13 +586,8 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- PIED DE PAGE -->
 
   <footer>
 
@@ -507,7 +607,7 @@
       33 rue de Berthaucourt, 08000 Charleville-Mézières
     </p>
 
-    <p style="margin-top:15px;">
+    <p style="margin-top:16px;">
       © 2026 Les Baroudeurs Ardennes
     </p>
 
