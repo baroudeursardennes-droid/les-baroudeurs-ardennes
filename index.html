@@ -16,7 +16,6 @@
   <link rel="canonical"
         href="https://lesbaroudeursardennes.fr/">
 
-  <!-- Réseaux sociaux / partage -->
   <meta property="og:title"
         content="Les Baroudeurs Ardennes">
 
@@ -63,6 +62,7 @@
       color: #173f32;
       line-height: 1.6;
     }
+
 
     /* =========================
        NAVIGATION
@@ -324,6 +324,7 @@
       grid-template-columns:
         repeat(3, minmax(0, 1fr));
       gap: 25px;
+      align-items: stretch;
     }
 
     .join-card {
@@ -332,6 +333,10 @@
       padding: 30px;
       border-radius: 20px;
       text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .join-card h3 {
@@ -342,6 +347,10 @@
     .join-card p {
       margin-bottom: 25px;
       color: #444;
+    }
+
+    .join-card .btn {
+      margin-top: auto;
     }
 
 
@@ -452,6 +461,7 @@
     }
 
   </style>
+
 </head>
 
 
@@ -826,7 +836,7 @@
           et les acteurs du territoire.
         </p>
 
-        <a href="#contact"
+        <a href="partenaire.html"
            class="btn btn-gold">
           Devenir partenaire
         </a>
@@ -858,10 +868,12 @@
     </h2>
 
     <p class="contact-intro">
+
       <strong>
         Une idée, un projet, un coup de main ?<br>
         Venez barouder avec nous !
       </strong>
+
     </p>
 
 
@@ -952,4 +964,4 @@
 
 
 </body>
-  </html>
+</html>
