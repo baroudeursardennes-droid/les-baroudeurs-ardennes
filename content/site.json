@@ -1,30 +1,28 @@
 {
   "hero": {
     "title": "Les Baroudeurs Ardennes",
-    "subtitle": "Facilitons l’itinérance !",
-    "intro": "Une association locale née d’une passion commune pour le vélo, la randonnée et le territoire ardennais.",
+    "subtitle": "Nature. Partage.",
+    "intro": "Ensemble, partageons notre passion pour la randonnée pédestre et à vélo, la nature et le territoire ardennais.",
     "logo": "/assets/logo-officiel.png",
     "background": "/assets/fond-ardennais.jpg"
   },
-  "objectives": {
-    "title": "Nos objectifs",
-    "items": [
-      "Accueillir",
-      "Faciliter",
-      "Créer du lien",
-      "Accompagner",
-      "Faire découvrir"
-    ]
-  },
+
   "association": {
     "title": "Qui sommes-nous ?",
     "paragraphs": [
-      "Les Baroudeurs Ardennes est une association locale née d’une passion commune pour le vélo, la randonnée et le territoire ardennais.",
-      "Nous voulons rendre l’itinérance plus accessible en répondant aux besoins des randonneurs et des cyclotouristes.",
+      "Les Baroudeurs Ardennes est une association implantée à Charleville-Mézières, née d’une passion commune pour le vélo, la randonnée et le territoire ardennais.",
+      "Nous voulons rendre l’itinérance plus facile en répondant aux besoins des randonneurs et des cyclotouristes d’ici ou d’ailleurs.",
       "Notre démarche repose sur le partage, la transmission des savoir-faire et la valorisation des Ardennes."
     ]
   },
+
   "projects": [
+    {
+      "title": "La Carte des Baroudeurs",
+      "text": "La carte d’adhésion à l’association qui permet de soutenir les commerçants et de profiter de réductions exclusives.",
+      "status": "Adhésion et réseau local",
+      "icon": "🤝"
+    },
     {
       "title": "Les Lockers des Baroudeurs",
       "text": "Des consignes pour bagages avec recharges VAE et téléphone, pour favoriser les haltes et les visites.",
@@ -33,20 +31,20 @@
     },
     {
       "title": "Le Triporteur des Baroudeurs",
-      "text": "Un vélo-taxi mis à disposition des associations et des collectivités pour faire découvrir le territoire et proposer un service différent.",
+      "text": "Un vélo-taxi mis à disposition des associations et des collectivités pour faire découvrir le territoire et proposer un service différent, mais aussi un café itinérant aux points stratégiques des Ardennes.",
       "status": "Projet en développement",
       "icon": "🚲"
     },
     {
       "title": "Les animations",
-      "text": "Des randonnées, sorties à vélo, aide à la préparation du voyage, rencontres (diététicien, kinésithérapeute, associations…).",
-      "status": "Actions à développer",
+      "text": "Des randonnées, sorties à vélo, aide à la préparation du voyage, rencontres avec des professionnels et des associations.",
+      "status": "Animations et rencontres",
       "icon": "🥾"
     },
     {
       "title": "Les formations",
       "text": "Un accompagnement personnalisé à l’entretien et à la réparation vélo en vue d’être autonome sur la route.",
-      "status": "À venir",
+      "status": "Transmission des savoir-faire",
       "icon": "🔧"
     },
     {
@@ -56,26 +54,31 @@
       "icon": "☕"
     }
   ],
+
   "join": {
     "title": "Rejoignez l’aventure",
     "intro": "Les Baroudeurs Ardennes vivent grâce à l’énergie des bénévoles, des adhérents et des partenaires locaux.",
     "cards": [
       {
-        "title": "Devenir bénévole",
-        "text": "Partager du temps, des compétences ou simplement l’envie d’agir."
+        "title": "Devenir Baroudeur bénévole",
+        "text": "Partager du temps, des compétences ou simplement l’envie d’agir.",
+        "button": "Devenir bénévole"
       },
       {
-        "title": "Adhérer",
-        "text": "Soutenir l’association et participer à ses animations et son développement.",
+        "title": "Devenir Baroudeur adhérent",
+        "text": "Soutenir l’association et participer à ses animations et à son développement.",
         "button": "J’adhère aux Baroudeurs",
         "url": "https://www.helloasso.com/associations/les-baroudeurs-ardennes/adhesions/rejoignez-nous-et-devenez-baroudeur"
       },
       {
-        "title": "Devenir partenaire",
-        "text": "Commerçants, associations, collectivités et acteurs du territoire : construisons ensemble !"
+        "title": "Devenir Baroudeur partenaire",
+        "text": "Mener des projets avec les commerçants, les associations, les collectivités et les acteurs du territoire.",
+        "button": "Devenir partenaire",
+        "url": "/partenaire.html"
       }
     ]
   },
+
   "contact": {
     "title": "Contactez-nous",
     "intro": "Une idée, un projet, un coup de main ? Venez barouder avec nous !",
@@ -84,6 +87,7 @@
     "facebook": "https://www.facebook.com/share/1WyYCEHYVP/",
     "instagram": "https://www.instagram.com/les_baroudeurs_ardennes?stkn=MTZ1MTl4c2t2dTRzMQ=="
   },
+
   "footer": {
     "baseline": "Déposez, rechargez, profitez, explorez.",
     "legal": "Association loi 1901 • RNA W081007803 • SIRET 109 257 329 00010 • 33 rue de Berthaucourt, 08000 Charleville-Mézières"
